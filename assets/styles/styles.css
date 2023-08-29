@@ -1,0 +1,55 @@
+    * {
+        font-family: sans-serif;
+        box-sizing: border-box;
+    }  
+
+    h1 {
+        margin-left: 6%;
+    }
+
+    header p {
+        margin-left: 6%;
+    }
+
+    .wrappe-form {
+        border-top:2px solid grey;
+        margin-left: 6%;
+        margin-right: 6%;
+        padding: 48px;
+        opacity: 100%;
+    }
+
+    .wrappe-form input {
+        margin: 1%;
+        border: none;
+        border-bottom: 1px solid black;
+        outline: none;
+    }
+
+    .wrappe-detail {
+        padding: 1%;
+        margin-left: 6%;
+        margin-right: 6%;
+        margin-top: 1%;
+        border:2px solid black;
+    }
+
+    .wrappe-taches-liste {
+        border:2px solid black;
+        margin-left: 6%;
+        margin-right: 6%;
+        padding: 48px;
+    }
+    .wrappe-taches-liste h2{
+        margin-bottom: 3%;
+    };
+
+    .niveau {
+        margin: 6%;
+    };
+
+
+
+    /* .error {
+        color: red;
+    }; */

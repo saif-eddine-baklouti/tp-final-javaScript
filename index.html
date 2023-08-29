@@ -1,0 +1,50 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/styles/styles.css">
+        <script src="./assets/scripts/form.js"></script>
+        <script src="./assets/scripts/main.js"></script>
+        <title>TP-2-2</title>
+    </head>
+    <body>
+        <header>
+            <h1>TP2</h1>
+            <p>Un gesttionnaire de taches (to-do-list)</p>
+        </header>
+        <main>
+            <section>
+                <div class="wrappe-form">    
+                    <h2>Ajouter une tache</h2>
+                        <form class="form" data-js-form>
+                            <label for="nouvelle-tache">Nouvelle tache : </label>
+                                <input type="text"> </br>
+                            <label for="description">Description :</label> 
+                                <input type="text">
+                        <div class="niveau">    
+                            <label for="haute">Haute  :</label>    
+                                <input type="radio" name="niveau" id="haute" value="3">
+                            <label for="moyenne">Moyenne  :</label>    
+                                <input type="radio" name="niveau" id="moyenne" value="2">
+                            <label for="basse">Basse  :</label>    
+                                <input type="radio" name="niveau" id="basse" value="1">
+                        </div>        
+                                    <button type="submit">Ajouter</button>
+                        </form>
+                </div>
+            </section>
+                <div class="wrappe-taches-liste" >
+                    <h2> Liste des taches </h2>
+                    <div class="taches"></div>
+                    <button type="submit">Trier par ordre alphabetique</button>
+                    <button type="submit">Trier par importance</button>
+                </div>
+            <section>
+                <div class="wrappe-detail" >
+                    <h2>Detail d'une tache</h2>
+                </div>
+            </section>
+        </main>
+    </body>
+    </html>
