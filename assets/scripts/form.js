@@ -1,4 +1,5 @@
 let aTaches = [];
+let index = 0;
 
 class Formulaire {
 
@@ -12,13 +13,14 @@ class Formulaire {
         this._elsInputRadio = this._el.querySelectorAll('input[type="radio"]');  
         // console.log(this._elsInputRadio);
         this._elWrappeInputRadio = this._el.querySelector('.niveau');  
-        this._tachesDom = document.querySelector('[data-js-taches]')
+        this._tachesDom = document.querySelector('[data-js-taches]');
         this._elBtn = this._el.querySelector('button');
         // console.log(this._elBtn);
         this._tache = {};
         this._checkRadio = false;
         this._checkText = false;
         this._estValide = true;
+
         this.init();
 	}
     /**
@@ -40,7 +42,7 @@ class Formulaire {
         this.validationTache();
         console.log(this.validationTache());
         if (this.validationTache()) {
-            this.recupereTache();
+            this.recupereInjecteTache();
             this.resetForm();
             
             
@@ -79,9 +81,10 @@ class Formulaire {
         }
     }
 
-    recupereTache () {
+    recupereInjecteTache () {
         
         let tache = {};
+            
         
 
         for (let i = 0, l = this._elsInputText.length; i < l; i++) {
@@ -100,17 +103,22 @@ class Formulaire {
             aTaches.push(tache)
             console.log(aTaches)
             
-
+            // if (aTaches.length > 0) {
+            //     index = aTaches.length -1 
+            // }
             let dom = 
             `
-            <div>
-            <p><small>Tache : </small>${tache['tache']} - <small>Importance : </small>${tache['importance']}  <button type="button">  Afficher le detail</button><button type="button">   Supprimer</button>  </p>
+            <div >
+            <p><small>Tache : </small>${tache['tache']} - <small>Importance : </small>${tache['importance']}  <button data-js-index=${index} name="affiche" > Afficher le detail</button><button data-js-index=${index} name="supprime" > Supprimer</button>  </p>
             </div>
             `;
             
             
     
             this._tachesDom.insertAdjacentHTML("beforeend", dom)
+            index++;
+            
+
     }
 
     resetForm () {

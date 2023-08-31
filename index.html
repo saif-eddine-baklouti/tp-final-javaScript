@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./assets/styles/styles.css">
         <script src="./assets/scripts/form.js"></script>
+        <script src="./assets/scripts/tache.js"></script>
+        <script src="./assets/scripts/trierTache.js"></script>
         <script src="./assets/scripts/main.js"></script>
         <title>TP-2-2</title>
     </head>
@@ -34,15 +36,16 @@
                         </form>  
                 </div>
             </section>
-                <div class="wrappe-taches-liste" >
+                <div class="wrappe-taches-liste" data-js-tri-taches >
                     <h2> Liste des taches </h2>
-                    <div class="taches" data-js-taches></div>
-                    <button type="submit">Trier par ordre alphabetique</button>
-                    <button type="submit">Trier par importance</button>
+                    <div class="taches" data-js-taches ></div>
+                    <button name="alpha" >Trier par ordre alphabetique</button>
+                    <button name="import">Trier par importance</button>
                 </div>
             <section>
                 <div class="wrappe-detail" >
                     <h2>Detail d'une tache</h2>
+                    <div data-js-detail></div>
                 </div>
             </section>
         </main>
