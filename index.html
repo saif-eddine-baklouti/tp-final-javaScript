@@ -11,7 +11,7 @@
     <body>
         <header>
             <h1>TP2</h1>
-            <p>Un gesttionnaire de taches (to-do-list)</p>
+            <p>Un gestionnaire de taches (to-do-list)</p>
         </header>
         <main>
             <section>
@@ -19,24 +19,24 @@
                     <h2>Ajouter une tache</h2>
                         <form class="form" data-js-form>
                             <label for="nouvelle-tache">Nouvelle tache : </label>
-                                <input type="text"> </br>
+                                <input type="text" id="tache" name="tache" > </br>
                             <label for="description">Description :</label> 
-                                <input type="text">
+                                <input type="text" id="description" name="description">
                         <div class="niveau">    
                             <label for="haute">Haute  :</label>    
-                                <input type="radio" name="niveau" id="haute" value="3">
+                                <input type="radio" name="importance" id="haute" value="3" >
                             <label for="moyenne">Moyenne  :</label>    
-                                <input type="radio" name="niveau" id="moyenne" value="2">
+                                <input type="radio" name="importance" id="moyenne" value="2">
                             <label for="basse">Basse  :</label>    
-                                <input type="radio" name="niveau" id="basse" value="1">
+                                <input type="radio" name="importance" id="basse" value="1">
                         </div>        
                                     <button type="submit">Ajouter</button>
-                        </form>
+                        </form>  
                 </div>
             </section>
                 <div class="wrappe-taches-liste" >
                     <h2> Liste des taches </h2>
-                    <div class="taches"></div>
+                    <div class="taches" data-js-taches></div>
                     <button type="submit">Trier par ordre alphabetique</button>
                     <button type="submit">Trier par importance</button>
                 </div>
@@ -48,3 +48,4 @@
         </main>
     </body>
     </html>
+    

@@ -1,0 +1,5 @@
+    class Tache {
+        constructor(el){
+            
+        }
+    }

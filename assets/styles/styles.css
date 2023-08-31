@@ -16,7 +16,8 @@
         margin-left: 6%;
         margin-right: 6%;
         padding: 48px;
-        opacity: 100%;
+        
+        
     }
 
     .wrappe-form input {
@@ -44,12 +45,19 @@
         margin-bottom: 3%;
     };
 
-    .niveau {
-        margin: 6%;
+    .importance {
+        margin: 10%;
+        
+        
     };
 
+    div {
+        margin-right: 0.5%;
+    }
 
 
-    /* .error {
+    .error {
         color: red;
-    }; */
+        
+    };
+
