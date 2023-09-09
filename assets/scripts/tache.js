@@ -1,9 +1,6 @@
     class Tache {
         constructor(el){
             this._el = el; 
-            // this._btnDetail = el.querySelectorAll('[data-js-btn]');
-            
-            // this._elsTache = this._el.querySelectorAll('data-js-index');
             this._tachesDom = document.querySelector('[data-js-taches]');
             this._detail = document.querySelector('[data-js-detail]');
             this.init();
@@ -18,27 +15,19 @@
             e.preventDefault();
                 this.elTarget = e.target;
                 this.index = this.elTarget.getAttribute('data-js-index');
-                // console.log(index)
-                // console.log(elTarget.name)
                 switch (this.elTarget.name) {
                     case 'affiche':
-                        console.log('affiche')    
                         this.afficheDetailTache(this.index);
-                        console.log(this.index)
                         break;
-                        case 'supprime':
-                            console.log('supprime')    
-                            
+                    case 'supprime':
                         this.supprimeTache(this.index);
                         break;    
                 
                     default:
                         break;
                 }
-            // console.log(this._btnDetail)
-            // console.log(this._elsTache)
-        }
 
+        }
 
         afficheDetailTache(i) {
             let dom = 
@@ -55,10 +44,7 @@
             index = 0
             aTaches.splice(x,1)
 
-            // this._tachesDom.innerHTML = 
-
             for (let i = 0, l = aTaches.length; i < l; i++) {
-                console.log(aTaches[i])
 
                 dom += 
                 `

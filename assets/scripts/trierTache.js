@@ -14,18 +14,11 @@ class TrierTaches {
     trierTaches(e){
         e.preventDefault();
 
-        // console.log('hey')
-        
-        // console.log(e)
-        // console.log(this._tachesDom)
         this.elTarget = e.target;
         this.index = this.elTarget.getAttribute('data-js-index');
 
         switch (this.elTarget.name) {
             case 'alpha':
-                console.log('alpha')    
-                // this.triAlpha(this.index);
-                // console.log(this.index)
                 this.triAlpha();
                 break;
             case 'import':
@@ -49,25 +42,19 @@ class TrierTaches {
                 return 0;
             })
 
-            // this._tachesDom.innerHTML = 
-
             for (let i = 0, l = aTaches.length; i < l; i++) {
-                // aTaches[i] = aTaches[i].sort();
 
                 dom += 
                 `
                 <div >
                 <p><small>Tache : </small>${aTaches[i].tache} - <small>Importance : </small>${aTaches[i].importance}  <button data-js-index=${index} name="affiche" > Afficher le detail</button><button data-js-index=${index} name="supprime" > Supprimer</button>  </p>
                 </div>
-                
                 `;
 
                 index++;
 
-                
-                
-                
             }
+
             this._tachesDom.innerHTML = dom; 
     }
 
@@ -81,10 +68,7 @@ class TrierTaches {
                 return 0;
             })
 
-            // this._tachesDom.innerHTML = 
-
             for (let i = 0, l = aTaches.length; i < l; i++) {
-                // aTaches[i] = aTaches[i].sort();
 
                 dom += 
                 `
@@ -96,11 +80,10 @@ class TrierTaches {
 
                 index++;
 
-                
-                
-                
             }
+
             this._tachesDom.innerHTML = dom; 
+
     }
 
 };

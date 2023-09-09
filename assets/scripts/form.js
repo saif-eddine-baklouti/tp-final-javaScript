@@ -6,16 +6,12 @@ class Formulaire {
 	constructor(el) {
     
         this._el = el;
-        // console.log(this._el);
         this._elsInputText = this._el.querySelectorAll('input[type="text"]');
         this._wrappeNomTache = this._elsInputText[0].previousElementSibling;  
-        // console.log(this._elsInputText);
         this._elsInputRadio = this._el.querySelectorAll('input[type="radio"]');  
-        // console.log(this._elsInputRadio);
         this._elWrappeInputRadio = this._el.querySelector('.niveau');  
         this._tachesDom = document.querySelector('[data-js-taches]');
         this._elBtn = this._el.querySelector('button');
-        // console.log(this._elBtn);
         this._tache = {};
         this._checkRadio = false;
         this._checkText = false;
@@ -39,12 +35,9 @@ class Formulaire {
     ajouterTache(e) {
         e.preventDefault();
         
-        this.validationTache();
-        console.log(this.validationTache());
         if (this.validationTache()) {
             this.recupereInjecteTache();
             this.resetForm();
-            
             
         }
                 
@@ -54,7 +47,6 @@ class Formulaire {
         if (!this._elsInputText[0].value == '') {
             this._checkText = true
             if (this._wrappeNomTache.classList.contains('error')) this._wrappeNomTache.classList.remove('error')
-            // console.log(this._wrappeNomTache)
     } else {
         this._wrappeNomTache.classList.add('error')
         this._checkText = false
@@ -101,11 +93,7 @@ class Formulaire {
             }
         }
             aTaches.push(tache)
-            console.log(aTaches)
-            
-            // if (aTaches.length > 0) {
-            //     index = aTaches.length -1 
-            // }
+
             let dom = 
             `
             <div >
